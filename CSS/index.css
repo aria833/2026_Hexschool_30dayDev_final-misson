@@ -1,0 +1,145 @@
+/* 整體背景顏色 */
+body {
+    background-color: var(--color-primary-50);
+}
+
+/* 裝飾定位 */
+.profile {
+    position: relative;
+    overflow: hidden;
+}
+
+.deco {
+    position: absolute;
+    pointer-events: none; /* 避免裝飾圖擋住滑鼠點擊 */
+}
+
+.decorate-1 {
+    top: 97px;
+    left: 781px;
+}
+
+.decorate-2 {
+    bottom: 87px;
+    right: 232px;
+}
+
+.flower-left-top {
+    top: 56px;
+    left: 86px;
+}
+
+.decorate-4 {
+    top: 120px;
+    left: 225px;
+}
+
+.decorate-3 {
+    &.flower-left-bottom {
+        top: 528px;
+        left: 703px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.decorate-5 {
+    top: 597px;
+    left: 523px;
+}
+
+.decorate-3 {
+    &.flower-right-center {
+        top: 206px;
+        right: 142px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 375px) {
+    .decorate-1 {
+        top: 26px;
+        left: -27px;
+        width: 80px;
+        height: 79px;
+    }
+
+    .decorate-2 {
+        top: 274px;
+        right: -25px;
+        width: 80px;
+        height: 69px;
+    }
+
+    .decorate-3 {
+    &.flower-left-bottom {
+      width: 80px;
+      height: 80px;
+      top: 414px;
+      left: 249px;
+    }
+
+    &.flower-left-top {
+      display: none;
+    }
+
+    &.flower-right-center {
+      display: none;
+    }
+  }
+
+    .decorate-4,
+    .decorate-5 {
+        display: none;
+    }
+
+    /* 僅於手機版顯示的線條圖片 */
+    .decorate-6 {
+        position: absolute;
+        display: block;
+        top: 398.41px;
+        left: 134.5px;
+    }
+}
+
+/* Service 區塊 */
+.service {
+    background-color: var(--color-primary-900);
+}
+
+
+/* Blog 區域 */
+.blog-list {
+    display: flex;
+    align-items: stretch;
+}
+
+.blog-list-article {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-list-article-detail {
+        flex-grow: 1; /* 這塊區域要將剩下空白的地方吃掉*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+/* Related blogs區塊 */
+@media (max-width: 375px) {
+    .blog-list {
+        flex-direction: row;
+        align-items: stretch;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;   /* 讓手機滑動時有滑順的滑鼠/手指跟隨感 */
+        scrollbar-width: none; /* 隱藏原生的滾動條*/
+    } 
+
+    .blog-list-article {
+        flex-shrink: 0;
+        width: 280px;
+    }
+
+}

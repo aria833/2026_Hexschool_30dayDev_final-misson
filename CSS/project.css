@@ -1,0 +1,47 @@
+.projectHeroimage {
+    color: var(--color-neutral-0);
+    background-image: 
+        linear-gradient(var(--color-dark-40a), var(--color-dark-40a)),
+        url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_banner.png?raw=true");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 109px 0px;
+    overflow: hidden;
+}
+
+/* RWD：375px heroimage區塊調整 */
+@media (max-width: 375px) {
+    .projectHeroimage {
+        background-image: 
+        linear-gradient(var(--color-dark-40a), var(--color-dark-40a)),
+        url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/project_banner.png?raw=true");
+        padding: 142px 12px;
+        background-position: center center;
+    }
+}
+
+.projectNav-list {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* 讓每個li平均分配 */
+.projectNav-list li {
+    flex: 1;
+}
+
+
+.projectBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.projectBtn.on {
+    background-color: var(--color-primary-900);
+    color: var(--color-neutral-0);
+}
+

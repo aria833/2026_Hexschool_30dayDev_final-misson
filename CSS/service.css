@@ -1,0 +1,89 @@
+/* Services區域 */
+.service {
+    background-image: 
+       linear-gradient(var(--color-dark-40a), var(--color-dark-40a)),
+        url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/service_banner.png?raw=true");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: var(--color-neutral-0);
+}
+
+@media (max-width: 375px) {
+    .service {
+        background-image: 
+        linear-gradient(var(--color-dark-40a), var(--color-dark-40a)),
+        url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/service_banner.png?raw=true");
+        background-position: center center;
+    }
+
+    .service-list-card {
+        padding: 16px 12px;
+        width: calc(50% - 12px);
+    }
+
+    .service-list-card-kind {
+        width: 100%;
+    }
+}
+
+
+.service-list-card {
+    background-color: var(--color-neutral-0);
+    color: var(--color-neutral-700);
+    padding: 32px;
+}
+
+
+.service-list-card.selected {
+    background-color: var(--color-primary-900);
+    color: var(--color-neutral-0);
+}
+
+.service-list-card-kind {
+    width: 187px;
+}
+
+/* Step區域 */
+.step {
+    background-color: var(--color-primary-900);
+    color: var(--color-neutral-0);
+}
+
+.stepNumber {
+    border: 1px solid var(--color-neutral-0);
+    border-radius: 1000px;
+    padding: 8px;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    color: var(--color-primary-900);
+}
+
+.line {
+    border-left: 0.5px solid var(--color-neutral-0);
+    height: 102px;
+}
+
+.padding-b40 {
+    padding-bottom: 40px;
+}
+
+
+/* FAQ區域 */
+.faq-qaList-card1 {
+    border-bottom: 1px solid var(--color-primary-900);
+}
+
+.faq-qaList-card2 {
+    border-bottom: 1px solid var(--color-primary-900);
+}
+
+.faq {
+    background-color: var(--color-primary-50);
+}
+
+

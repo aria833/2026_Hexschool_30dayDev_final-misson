@@ -1,0 +1,102 @@
+/* Heroimage區域*/
+.heroimage {
+    color: var(--color-neutral-0);
+    background-image: 
+        linear-gradient(var(--color-dark-40a), var(--color-dark-40a)),
+        url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_banner.png?raw=true");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 109px 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.watermark {
+    color: rgba(253, 247, 241, 0.2);
+    position: absolute;
+    z-index: 1;
+    bottom: -140px;
+
+    /* left: 50%：元素左邊界移到父元素的正中央
+    transform: translateX(-50%)：再往左移自身寬度的一半*/
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* RWD：375px heroimage區塊調整 */
+@media (max-width: 375px) {
+    .heroimage {
+        background-image: 
+        linear-gradient(var(--color-dark-40a), var(--color-dark-40a)),
+        url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/blog_banner.png?raw=true");
+        padding: 140px 12px;
+        background-position: center center;
+    }
+
+    .watermark.display2-md {
+        bottom: -50px;
+    }
+
+}
+
+
+/* nav 區塊*/
+.article-block-nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.navButton.on {
+    background-color: var(--color-primary-900);
+    color: var(--color-neutral-0);
+}
+
+.article-block-nav a:hover {
+    background-color: var(--color-primary-900);
+    color: var(--color-neutral-0);
+}
+
+/* RWD：375px nav區塊調整 */
+@media (max-width: 375px){
+    .article-block-nav {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .article-block-nav a {
+        padding: 8px 12px;
+
+    }
+
+    /* 隱藏手機版瀏覽器預設的滾動條 */
+    .article-block-nav::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+/* 頁碼設定 */
+.article-page a {
+    padding: 8px;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.currentPage {
+    background-color: var(--color-neutral-700);
+    color: var(--color-neutral-0); 
+    border: 1px solid var(--color-neutral-700);
+    border-radius: 1000px;
+}

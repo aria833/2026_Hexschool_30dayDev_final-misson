@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Nelson</title>
+
+    <!--載入相關CSS檔案，從reset先放，清空預設樣式-->
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <link rel="stylesheet" href="/CSS/base.css">
+    <link rel="stylesheet" href="/CSS/project.css">
+
+    <!--搜尋引擎相關-->
+    <meta name="keywords" content="UIUX設計師, 前端工程師, 六角學院">
+    <meta name="description" content="我是一個擁有 10 年經驗的 UIUX 設計師 和 前端工程師，喜歡把美學和程式結合，打造一個又一個精美的網頁設計！">
+
+    <!--Noto-sans字體-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap" rel="stylesheet">
+
+    <!--google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=format_color_fill" />
+    <style>
+        .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+        }
+    </style>
+
+    <!--bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-25..0" />
+</head>
+<body>
+    <!---遮罩-->
+    <div class="mask z-1"></div>
+
+    <!--導覽列選單-->
+    <header>
+        <nav class="z-1 sticky-top">
+         <!--透過container將版面結構與內容進行分離，並控制版面寬度與排版-->
+            <div class="container d-flex align-c py-12 py-md-8">
+                <a href="index.html">
+                    <picture>
+                        <source srcset="
+                      https://raw.githubusercontent.com/hexschool/2022-web-layout-training/456698ad0b642710162489555e98fd3b15eb49ff/2026-web-camp/device-mobile.svg
+                    " media="(max-width: 375px)" />
+                        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/456698ad0b642710162489555e98fd3b15eb49ff/2026-web-camp/device-pc.svg" alt="nelson_logo" />
+                    </picture>
+                </a>
+
+                <!--RWD：375px 漢堡選單-->
+                <button class="d-none d-md-block ml-auto padding-12-all menu-btn" type="button">
+                    <span class="material-symbols-outlined">dehaze</span>
+                </button>
+
+                <!--電腦版：導覽列-->
+                <ul class="d-flex d-md-none label-medium nav-list ml-auto py-4 label-md-small">
+                    <li><a href="service.html" class="py-4 px-12">服務項目</a></li>
+                    <li><a href="project.html" class="py-4 px-12">專案作品</a></li>
+                    <li><a href="blog.html" class="py-4 px-12">部落格</a></li>
+                    <li><a href="#contact" class="py-4 px-12">與我聯絡</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Heroimage區塊-->
+    <div class="projectHeroimage">
+        <div class="container">
+            <h1 class="heading-xxxlarge heading-md-xlarge">PROJECTS</h1>
+            <h2 class="heading-xxlarge heading-md-xlarge">專案作品</h2>
+        </div>
+    </div>
+
+    <!--專案導覽列區塊-->
+    <div class="projectNav">
+        <div class="container">
+            <ul class="projectNav-list d-flex jcsb align-c heading-xxsmall heading-md-xxxsmall margin-tb40 margin-md-tb24">
+                <li><a href="#" class="projectBtn on">全部</a></li>
+                <li><a href="#" class="projectBtn">平面設計</a></li>
+                <li><a href="#" class="projectBtn">網頁設計</a></li>
+                <li><a href="#" class="projectBtn">前端切版</a></li>
+                <li><a href="#" class="projectBtn">後端開發</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Project列表-->
+    <div class="project">
+        <div class="container">
+            <div class="project-list d-flex fdc gap-24 ga p-md-12">
+                <div class="project-list-item1">
+                    <div class="project-list-item-detail bg-primary-50 padding-40-all d-flex fdc gap-12">
+                        <time datetime="2025-10-16" class="paragraph-small paragraph-md-xsmall">Oct 16, 2025</time>
+                        <div class="project-list-detail-tag paragraph-medium d-flex jcc gap-8">
+                            <p>平面設計</p>
+                            <p>·</p>
+                            <p>網頁設計</p>
+                        </div>
+                        <h2 class="heading-small heading-md-xsmall">品牌視覺與電商整合，多肉植物品牌電商建置</h2>
+                        <p class="paragraph-medium paragraph-md-small">從品牌識別設計到 RWD 網站開發，打造療癒系植栽購物體驗</p>
+                        <div class="project-list-item-detail-button d-flex jcc label-medium label-md-small">
+                            <a href="#" class="button1">前往專案</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-list-item2">
+                    <div class="project-list-item-detail bg-primary-50 padding-40-all d-flex fdc gap-12">
+                        <time datetime="2025-10-16" class="paragraph-small paragraph-md-xsmall">Oct 16, 2025</time>
+                        <div class="project-list-detail-tag paragraph-medium d-flex jcc gap-8">
+                            <p>平面設計</p>
+                            <p>·</p>
+                            <p>網頁設計</p>
+                            <p>·</p>
+                            <p>前端切版</p>
+                        </div>
+                        <h2 class="heading-small heading-md-xsmall">數位產品 UI/UX 設計，個人化財務視覺化軟體</h2>
+                        <p class="paragraph-medium paragraph-md-small">運用數據視覺化邏輯，將複雜的財務數據轉化為直覺的操作介面</p>
+                        <div class="project-list-item-detail-button d-flex jcc label-medium label-md-small">
+                            <a href="#" class="button1">前往專案</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-list-item3">
+                    <div class="project-list-item-detail bg-primary-50 padding-40-all d-flex fdc gap-12">
+                        <time datetime="2025-10-16" class="paragraph-small paragraph-md-xsmall">Oct 16, 2025</time>
+                        <div class="project-list-detail-tag paragraph-medium d-flex jcc gap-8">
+                            <p>前端切版</p>
+                            <p>·</p>
+                            <p>後端開發</p>
+                        </div>
+                        <h2 class="heading-small heading-md-xsmall">品牌識別與包裝設計，法式甜點品牌視覺重塑</h2>
+                        <p class="paragraph-medium paragraph-md-small">以溫暖、輕盈的視覺語言，精準定位高質感甜點市場的品牌形象</p>
+                        <div class="project-list-item-detail-button d-flex jcc label-medium label-md-small">
+                            <a href="#" class="button1">前往專案</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-list-item4">
+                    <div class="project-list-item-detail bg-primary-50 padding-40-all d-flex fdc gap-12">
+                        <time datetime="2025-10-16" class="paragraph-small paragraph-md-xsmall">Oct 16, 2025</time>
+                        <div class="project-list-detail-tag paragraph-medium d-flex jcc gap-8">
+                            <p>網頁設計</p>
+                            <p>·</p>
+                            <p>前端切版</p>
+                            <p>·</p>
+                            <p>後端開發</p>
+                        </div>
+                        <h2 class="heading-small heading-md-xsmall">金融科技系統設計，Open Bank API 數據整合平台</h2>
+                        <p class="paragraph-medium paragraph-md-small">串接第三方 API 並規劃穩定的後端架構，建構安全的資產管理後台。</p>
+                        <div class="project-list-item-detail-button d-flex jcc label-medium label-md-small">
+                            <a href="#" class="button1">前往專案</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-button d-flex jcc py-80 py-md-40">
+                <a href="#" class="button1">探索更多</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Contact區域-->
+    <div class="contact">
+        <div class="container d-flex gap-24 py-80 py-md-40 flex-md-col" id="contact">
+            <div class="contact-mainTitle d-flex fdc gap-24 col-5 col-md-12">
+                <div class="contact-mainTitle-tile">
+                    <h6 class="heading-xxxsmall heading-md-xxxxsmall">與我聯絡</h6>
+                    <h2 class="heading-xxxlarge heading-md-xlarge">CONTACT</h2>
+                </div>
+                <div class="contact-mainTitle-content d-flex fdc gap-4 ap-md-0 paragraph-medium paragraph-md-small">
+                    <p>若有數位產品設計和開發相關問題</p>
+                    <p>歡迎填寫表單 或 直接與我聯絡！</p>
+                </div>
+                <!--桌機版：先出現SNS資訊-->
+                <div class="contact-mainTitle-connect d-flex fdc gap-24 d-md-none paragraph-medium paragraph-md-small padding-top-68 padding-md-top0">
+                    <div class="contact-mainTitle-connect-SNS d-flex gap-12">
+                        <a href="#" class="icon-circle-48"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="icon-circle-48"><i class="bi bi-line"></i></a>
+                        <a href="#" class="icon-circle-48"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                    <div class="contact-mainTitle-connect-email d-flex gap-8 align-c">
+                        <span class="material-symbols-outlined">drafts</span>
+                        <a href="mailto:service@hexschool.com">service@hexschool.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form col-7 col-md-12">
+                <!--action:"javascript:void(0)"：完全不送出
+                method：「post」不會顯示在網址上/「get」會顯示在網址上
+                -->
+                <form action="javascript:void(0)" method="post" class="d-flex fdc gap-24 paragraph-medium paragraph-md-small flex-wrap px-40 px-md-0">
+                    <div class="contact-form-namePhone d-flex gap-24 d-md-column">
+                        <input type="text" placeholder="姓名" class="contact-input-half py-20 px-32 w-md-full">
+                        <input type="tel" placeholder="手機號碼" class="contact-input-half py-20 px-32 w-md-full">
+                    </div>
+                    <input type="email" placeholder="電子信箱" class="w-full py-20 px-32">
+                    <textarea placeholder="備註" class="w-full py-20 px-32"></textarea>
+                    <button type="submit" class="w-full label-medium label-md-small py-12">送出</button>
+                </form>
+            </div>
+            <!--RWD：375px SNS資訊在表格後出現-->
+            <div class="contact-sns-md d-none d-md-block paragraph-medium paragraph-md-small">
+                <div class="contact-mainTitle-connect d-flex fdc gap-24 padding-top-68 padding-md-top0">
+                    <div class="contact-mainTitle-connect-SNS d-flex gap-12">
+                        <a href="#" class="icon-md-circle-44"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="icon-md-circle-44"><i class="bi bi-line"></i></a>
+                        <a href="#" class="icon-md-circle-44"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                    <div class="contact-mainTitle-connect-email d-flex gap-8 align-c">
+                        <span class="material-symbols-outlined">drafts</span>
+                        <a href="mailto:service@hexschool.com">service@hexschool.com</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>

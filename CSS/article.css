@@ -1,0 +1,128 @@
+/* 麵包屑區域 */
+.breadcrumb {
+    background-color: var(--color-primary-900);
+    color: var(--color-neutral-0);
+}
+
+
+/* 圖片滿版 */
+img {
+    width: 100%
+}
+
+/* 文章區域 */
+.article-contentDetail-part3 {
+    background-color: var(--color-primary-50);
+}
+
+.article-conclusion-shareMethod-sns a {
+    border: 1px solid var(--color-neutral-700);
+    border-radius: 999px;
+    padding: 12px;
+}
+
+.padding-t16 {
+    padding-top: 16px;
+}
+
+@media (max-width: 375px) {
+    .padding-md-t8 {
+        padding-top: 8px;
+    }
+
+}
+
+
+/* 表格設定 */
+table {
+    width: 100%;
+    /* 把相鄰的邊框合併成一條線 */
+    border-collapse: collapse;
+    /* 讓整個表格外圍有一圈深色主色邊框 */
+    margin-top: 16px;
+}
+
+th {
+    background-color: var(--color-primary-900);
+    padding: 12px 24px;
+    color: var(--color-neutral-0);
+    text-align: left;
+}
+
+td {
+    padding: 12px 24px;
+    border: 1px solid var(--color-neutral-500);
+    background-color: var(--color-primary-50);
+    vertical-align: middle;
+    text-align: left;
+}
+
+@media (max-width: 375px) {
+    table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    table th,
+    table td {
+        word-break: break-all;
+
+    }
+
+    table th {
+        padding: 8px 12px;
+    }
+
+    table td {
+        padding: 8px 12px;
+    }
+}
+
+
+/* 文章分隔線*/
+.article-conclusion {
+    border-top: 1px solid var(--color-neutral-500);
+}
+
+/* related blog背景顏色 */
+.blog {
+    background-color: var(--color-primary-50);
+}
+
+
+.blog-list {
+    display: flex;
+    align-items: stretch;
+}
+
+.blog-list-article {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.blog-list-article-detail {
+        flex-grow: 1; /* 這塊區域要將剩下空白的地方吃掉*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+/* Related blogs區塊 */
+@media (max-width: 375px) {
+    .blog-list {
+        flex-direction: row;
+        align-items: stretch;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;   /* 讓手機滑動時有滑順的滑鼠/手指跟隨感 */
+        scrollbar-width: none; /* 隱藏原生的滾動條*/
+    } 
+
+    .blog-list-article {
+        flex-shrink: 0;
+        width: 280px;
+    }
+
+}
+
+

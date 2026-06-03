@@ -1,0 +1,343 @@
+ <!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article | Nelson</title>
+
+    <!--載入相關CSS檔案，從reset先放，清空預設樣式-->
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <link rel="stylesheet" href="/CSS/base.css">
+    <link rel="stylesheet" href="CSS/article.css">
+
+    <!--搜尋引擎相關-->
+    <meta name="keywords" content="UIUX設計師, 前端工程師, 六角學院">
+    <meta name="description" content="我是一個擁有 10 年經驗的 UIUX 設計師 和 前端工程師，喜歡把美學和程式結合，打造一個又一個精美的網頁設計！">
+
+    <!--Noto-sans字體-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&display=swap" rel="stylesheet">
+
+    <!--google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=format_color_fill" />
+    <style>
+        .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+        }
+    </style>
+
+    <!--bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-25..0" />
+</head>
+ <body>
+    <!---遮罩-->
+    <div class="mask z-1"></div>
+
+    <!--導覽列選單-->
+    <header>
+        <nav class="z-1 sticky-top">
+         <!--透過container將版面結構與內容進行分離，並控制版面寬度與排版-->
+            <div class="container d-flex align-c py-12 py-md-8">
+                <a href="index.html">
+                    <picture>
+                        <source srcset="
+                      https://raw.githubusercontent.com/hexschool/2022-web-layout-training/456698ad0b642710162489555e98fd3b15eb49ff/2026-web-camp/device-mobile.svg
+                    " media="(max-width: 375px)" />
+                        <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/456698ad0b642710162489555e98fd3b15eb49ff/2026-web-camp/device-pc.svg" alt="nelson_logo" />
+                    </picture>
+                </a>
+
+                <!--RWD：375px 漢堡選單-->
+                <button class="d-none d-md-block ml-auto padding-12-all menu-btn" type="button">
+                    <span class="material-symbols-outlined">dehaze</span>
+                </button>
+
+
+                <!--電腦版：導覽列-->
+                <ul class="d-flex d-md-none label-medium nav-list ml-auto py-4 label-md-small">
+                    <li><a href="service.html" class="py-4 px-12">服務項目</a></li>
+                    <li><a href="project.html" class="py-4 px-12">專案作品</a></li>
+                    <li><a href="blog.html" class="py-4 px-12">部落格</a></li>
+                    <li><a href="#contact" class="py-4 px-12">與我聯絡</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--麵包屑-->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="d-flex gap-8 gap-md-4 align-c label-medium label-md-small py-12 py-md-8">
+                <li><a href="index.html">首頁</a></li>
+                <li class="d-inlineFlex"><span class="material-symbols-outlined">keyboard_arrow_right</span></li>
+                <li><a href="blog.html">部落格</a></li>
+                <li class="d-inlineFlex"><span class="material-symbols-outlined">keyboard_arrow_right</span></li>
+                <li><a href="#">部落格標題</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--文章區域-->
+    <div class="article">
+        <div class="container d-flex fdc gap-24 gap-md-20 py-80 py-md-40">
+            <div class="article-mainTitle col-10 col-md-12 m-auto">
+                <div class="article-mainTitle-classification d-flex  jcsb align-c">
+                    <div class="article-mainTitle-classification-tag d-flex gap-8 gap-md-4 paragraph-medium paragraph-md-small">
+                        <p>UIUX 設計</p>
+                        <p>·</p>
+                        <p>前端技術</p>
+                        <p>·</p>
+                        <p>AI趨勢應用</p>
+                    </div>
+                    <time datetime="2022-10-16" class="d-md-none">Oct 16, 2022</time>
+                </div>
+                <h1 class="heading-xxlarge heading-md-medium">當 AI 遇上介面設計：資深設計師如何利用生成式工具重塑前端開發工作流與視覺想像力</h1>
+                <div class="article-mainTitle-content">
+                    <h3 class="heading-small padding-t16 padding-md-t8 heading-md-xxsmall">從像素到程式碼，探討 AI 如何成為數位職人的最強外掛，在美學與邏輯的交界處創造全新價值。</h3>
+                    <p class="paragraph-medium padding-t16 padding-md-t8 paragraph-md-small">在跨入 UI/UX 與前端領域的第十年，我見證了無數技術更迭，但 AI 的出現無疑是最具衝擊性的一場革命。本文將深度解析資深設計師如何將生成式 AI 整合進現有工作流，透過 AI 釋放視覺想像力，並利用智慧化工具優化前端開發效率，實踐美學與技術的完美共生。</p>
+                </div>
+            </div>
+            <div class="article-contentDetail col-10 col-md-12 m-auto">
+                <div class="article-contentDetail-part1">
+                    <h2 class="heading-large padding-t16 padding-md-t8 heading-md-small">視覺想像力的無限延伸：從 Moodboard 到驚艷視覺</h2>
+                    <p class="paragraph-medium padding-t16 padding-md-t8 paragraph-md-small">以往在發想專案視覺風格時，往往受限於素材搜尋的耗時或手繪草圖的限制。現在，透過 Midjourney 或 DALL-E 等工具，我能在幾分鐘內產出數十種具備極致美感的配色方案與佈局可能性。這並非取代設計師的審美，而是將我們從繁瑣的執行工作中解放，轉而擔任「視覺策展人」的角色，從龐大的 AI 提案中精煉出最契合品牌魂魄的視覺語言。</p>
+                </div>
+                <div class="article-contentDetail-part2">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_4.png?raw=true" alt="article_photo1" class="padding-t16 padding-md-t8">
+                    <p class="paragraph-medium padding-t16 padding-md-t8 paragraph-md-small">利用 AI 快速生成的品牌視覺概念圖，能有效縮短與客戶在初期的溝通成本。</p>
+                </div>
+                <div class="article-contentDetail-part3 d-flex fdc gap-8 padding-24-all align-c">
+                    <p class="paragraph-medium paragraph-md-small">我認為</p>
+                    <h5 class="heading-xsmall heading-md-xxxsmall">AI 不會取代設計師，但那些懂得與 AI 協作的人，將會定義下一個世代的設計標準</h5>
+                </div>
+                <div class="article-contentDetail-part4">
+                    <h3 class="heading-large padding-t16 padding-md-t8 heading-md-small">工作流的重塑：當設計稿與程式碼無縫銜接</h3>
+                    <p class="paragraph-medium padding-t16 padding-md-t8 paragraph-md-small">身為前端工程師，最挑戰的環節往往是將精美的設計稿「精準轉譯」為流暢的程式碼。AI 的介入讓這個轉譯過程變得前所未有的流暢。無論是自動產生複雜的 CSS 佈局、建構 React 元件邏輯，還是優化響應式斷點，AI 就像是一位全天候待命的技術助理，讓我們能將精力集中在更高維度的互動體驗設計與產品效能優化。</p>
+                </div>
+                <div class="article-contentDetail-part5">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_content_2.png?raw=true" alt="article_photo2" class="padding-t16 padding-md-t8">
+                    <p class="paragraph-medium padding-t16 padding-md-t8 paragraph-md-small">AI 輔助生成的 Clean Code 結構，顯著提升開發整潔度。</p>
+                </div>
+                <div class="article-contentDetail-part6">
+                     <h3 class="heading-large padding-t16 padding-md-t8 heading-md-small">跨領域利器：精選 AI 工具的實戰應用對比</h3>
+                    <p class="paragraph-medium padding-t16 padding-md-t8 paragraph-md-small">在數位職人的工具箱中，選擇正確的武器至關重要。為了讓大家在開發與設計的混合戰場中更具效率，我整理了一份實戰應用對比表。這份表格不僅是基於工具的功能，更是從我這十年的實務經驗出發，評估各項工具在實際專案中的落地價值與學習門檻，協助你快速找到最適合自己的 AI 隊友。</p>
+                </div>
+                <div class="article-contentDetail-part7">
+                    <h4 class="heading-small padding-t16 padding-md-t8 heading-md-xxsmall">2026 數位職人必備 AI 工具效能對比表</h4>
+                    <!--table不適用padding效果-->
+                    <table>
+                        <tr class="heading-xxsmall heading-md-xxxxsmall">
+                            <th>工具名稱</th>
+                            <th>應用範疇</th>
+                            <th>核心優勢</th>
+                            <th>學習曲線</th>
+                        </tr>
+                        <tr class="paragraph-medium paragraph-md-small">
+                            <td>Midjourney</td>
+                            <td>視覺構思</td>
+                            <td>創意發想極致，適合風格探索與氛圍圖生成</td>
+                            <td>中高</td>
+                        </tr>
+                        <tr class="paragraph-medium paragraph-md-small">
+                            <td>Figma AI</td>
+                            <td>UI 設計</td>
+                            <td>直接整合於設計稿，快速生成組件與圖表</td>
+                            <td>低</td>
+                        </tr>
+                        <tr class="paragraph-medium paragraph-md-small">
+                            <td>GitHub Copilot</td>
+                            <td>程式開發</td>
+                            <td>邏輯代碼預測準確，減少重複性標籤撰寫</td>
+                            <td>中</td>
+                        </tr>
+                        <tr class="paragraph-medium paragraph-md-small">
+                            <td>Claude</td>
+                            <td>程式邏輯</td>
+                            <td>具備強大文脈理解力，能優化複雜的用戶流程</td>
+                            <td>中</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="article-conclusion d-flex fdc gap-24 gap-md-20 col-10 col-md-12 m-auto padding-t16 padding-md-t8 paragraph-medium  paragraph-md-small">
+                <p>AI 的崛起並非數位職涯的終點，而是另一個高峰的起點。對於喜歡把美學與程式結合的我們來說，這是一個最好的時代。AI 給了我們更強大的雙翼，讓我們能飛得更高、看見更遠的設計地平線。保持好奇心，持續優化你的 Prompt，讓技術為藝術服務，創造出更多令人驚艷的作品。</p>
+                <div class="article-conclusion-shareMethod d-flex jcsb gap-24 gap-md-12 d-md-column d-md-alfe">
+                    <div class="article-conclusion-shareMethod-popularity d-flex gap-12 ">
+                        <div class="article-conclusion-shareMethod-popularity-view d-flex gap-4 align-c">
+                            <span class="material-symbols-outlined">visibility</span>
+                            <p>110 views</p> 
+                        </div>
+                        <div class="article-conclusion-shareMethod-popularity-share d-flex gap-4 align-c">
+                            <span class="material-symbols-outlined">share</span>
+                            <p>2 shares</p> 
+                        </div>
+                    </div>
+                    <div class="article-conclusion-shareMethod-sns d-flex align-c gap-12">
+                        <p>分享</p>
+                        <a href="#" class="icon-circle-48 icon-md-circle-44"><span class="material-symbols-outlined">share</span></a>
+                        <a href="#" class="icon-circle-48 icon-md-circle-44"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="icon-circle-48 icon-md-circle-44"><i class="bi bi-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Related Blog 區域-->
+    <div class="blog">
+        <div class="container py-80 py-md-40 d-flex fdc gap-40 gap-md-24">
+            <div class="blog-mainTitle">
+                    <h6 class="heading-xxxsmall heading-md-xxxxsmall">相關文章</h6>
+                    <h2 class="heading-xxxlarge heading-md-xlarge">RELATED BLOGS</h2>
+            </div>
+            <div class="blog-list d-flex gap-24 gap-md-12">
+                <div class="blog-list-article">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_2.png?raw=true" alt="blog_photo1">
+                    <div class="blog-list-article-detail d-flex fdc gap-12 gap-md-8">
+                        <div class="blog-list-article-detail-tag d-flex gap-8 gap-md-4 paragraph-medium paragraph-md-small">
+                            <p>UIUX 設計</p>
+                            <p>·</p>
+                            <p>設計規範</p>
+                            <p>·</p>
+                            <p>前端技術</p>
+                        </div>
+                        <h3 class="heading-small heading-md-xsmall">10年職人手記：如何運用 Figma 與 Storybook 打造美感與邏輯兼具的企業級設計系統</h3>
+                        <div class="blog-list-article-detail-info d-flex jcsb gap-24 gap-md-8 align-c paragraph-small paragraph-md-xsmall">
+                            <time datetime="2025-10-16">Oct 16, 2025</time>
+                            <div class="blog-list-article-detail-info-popularity d-flex gap-12 gap-md-8">
+                                <div class="blog-list-article-detail-info-popularity-view d-flex gap-4 align-c">
+                                    <span class="material-symbols-outlined font-md-20">visibility</span>
+                                    <p>110 views</p>
+                                </div>
+                                <div class="blog-list-article-detail-info-popularity-share d-flex gap-4 align-c">
+                                    <span class="material-symbols-outlined font-md-20">share</span>
+                                    <p>2 shares</p> 
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="blog-list-article">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_3.png?raw=true" alt="blog_photo2">
+                    <div class="blog-list-article-detail d-flex fdc gap-12 gap-md-8">
+                        <div class="blog-list-article-detail-tag d-flex gap-8 gap-md-4 paragraph-medium paragraph-md-small">
+                            <p>品牌設計</p>
+                            <p>·</p>
+                            <p>平面設計</p>
+                            <p>·</p>
+                            <p>UIUX 設計</p>
+                        </div>
+                        <h3 class="heading-small heading-md-xsmall">從平面識別到數位體驗：以「植感生活」為例，探討跨媒體品牌視覺在網頁上的精準轉譯</h3>
+                        <div class="blog-list-article-detail-info d-flex jcsb gap-24 gap-md-8 align-c paragraph-small paragraph-md-xsmall">
+                            <time datetime="2025-10-16">Oct 16, 2025</time>
+                            <div class="blog-list-article-detail-info-popularity d-flex gap-12 gap-md-8">
+                                <div class="blog-list-article-detail-info-popularity-view d-flex gap-4 align-c">
+                                    <span class="material-symbols-outlined font-md-20">visibility</span>
+                                    <p>110 views</p>
+                                </div>
+                                <div class="blog-list-article-detail-info-popularity-share d-flex gap-4 align-c">
+                                    <span class="material-symbols-outlined font-md-20">share</span>
+                                    <p>2 shares</p> 
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="blog-list-article">
+                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_4.png?raw=true" alt="blog_photo3">
+                    <div class="blog-list-article-detail d-flex fdc gap-12 gap-md-8">
+                        <div class="blog-list-article-detail-tag d-flex gap-8 gap-md-4 paragraph-medium paragraph-md-small">
+                            <p>前端技術</p>
+                            <p>·</p>
+                            <p>後端架構</p>
+                            <p>·</p>
+                            <p>AI 趨勢應用</p>
+                        </div>
+                        <h3 class="heading-small heading-md-xsmall">揭開金融 App 的設計密碼：如何優化 Open Bank API 的複雜數據呈現與後端串接安全性</h3>
+                        <div class="blog-list-article-detail-info d-flex jcsb gap-24 gap-md-8 align-c paragraph-small paragraph-md-xsmall">
+                            <time datetime="2025-10-16">Oct 16, 2025</time>
+                            <div class="blog-list-article-detail-info-popularity d-flex gap-12 gap-md-8">
+                                <div class="blog-list-article-detail-info-popularity-view d-flex gap-4 align-c">
+                                    <span class="material-symbols-outlined font-md-20">visibility</span>
+                                    <p>110 views</p>
+                                </div>
+                                <div class="blog-list-article-detail-info-popularity-share d-flex gap-4 align-c">
+                                    <span class="material-symbols-outlined font-md-20">share</span>
+                                    <p>2 shares</p> 
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contact區域-->
+    <div class="contact">
+        <div class="container d-flex gap-24 py-80 py-md-40 flex-md-col" id="contact">
+            <div class="contact-mainTitle d-flex fdc gap-24 col-5 col-md-12">
+                <div class="contact-mainTitle-tile">
+                    <h6 class="heading-xxxsmall heading-md-xxxxsmall">與我聯絡</h6>
+                    <h2 class="heading-xxxlarge heading-md-xlarge">CONTACT</h2>
+                </div>
+                <div class="contact-mainTitle-content d-flex fdc gap-4 ap-md-0 paragraph-medium paragraph-md-small">
+                    <p>若有數位產品設計和開發相關問題</p>
+                    <p>歡迎填寫表單 或 直接與我聯絡！</p>
+                </div>
+                <!--桌機版：先出現SNS資訊-->
+                <div class="contact-mainTitle-connect d-flex fdc gap-24 d-md-none paragraph-medium paragraph-md-small padding-top-68 padding-md-top0">
+                    <div class="contact-mainTitle-connect-SNS d-flex gap-12">
+                        <a href="#" class="icon-circle-48"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="icon-circle-48"><i class="bi bi-line"></i></a>
+                        <a href="#" class="icon-circle-48"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                    <div class="contact-mainTitle-connect-email d-flex gap-8 align-c">
+                        <span class="material-symbols-outlined">drafts</span>
+                        <a href="mailto:service@hexschool.com">service@hexschool.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form col-7 col-md-12">
+                <!--action:"javascript:void(0)"：完全不送出
+                method：「post」不會顯示在網址上/「get」會顯示在網址上
+                -->
+                <form action="javascript:void(0)" method="post" class="d-flex fdc gap-24 paragraph-medium paragraph-md-small flex-wrap px-40 px-md-0">
+                    <div class="contact-form-namePhone d-flex gap-24 d-md-column">
+                        <input type="text" placeholder="姓名" class="contact-input-half py-20 px-32 w-md-full">
+                        <input type="tel" placeholder="手機號碼" class="contact-input-half py-20 px-32 w-md-full">
+                    </div>
+                    <input type="email" placeholder="電子信箱" class="w-full py-20 px-32">
+                    <textarea placeholder="備註" class="w-full py-20 px-32"></textarea>
+                    <button type="submit" class="w-full label-medium label-md-small py-12">送出</button>
+                </form>
+            </div>
+            <!--RWD：375px SNS資訊在表格後出現-->
+            <div class="contact-sns-md d-none d-md-block paragraph-medium paragraph-md-small">
+                <div class="contact-mainTitle-connect d-flex fdc gap-24 padding-top-68 padding-md-top0">
+                    <div class="contact-mainTitle-connect-SNS d-flex gap-12">
+                        <a href="#" class="icon-md-circle-44"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="icon-md-circle-44"><i class="bi bi-line"></i></a>
+                        <a href="#" class="icon-md-circle-44"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                    <div class="contact-mainTitle-connect-email d-flex gap-8 align-c">
+                        <span class="material-symbols-outlined">drafts</span>
+                        <a href="mailto:service@hexschool.com">service@hexschool.com</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <script src="index.js"></script>
+ </body>
+ </html>

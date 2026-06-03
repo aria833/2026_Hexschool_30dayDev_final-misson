@@ -1,0 +1,961 @@
+/* 清除圖片底部預設的空隙：img預設為inline元素，會依照文字基線（baseline）進行垂直對齊，因此會在底部保留約3~5px的空間，用來容納文字的descender 
+    處理方式1：display:block
+        將圖片改為區塊元素，直接避免 inline 元素的基線空隙問題
+    處理方式2：vertical-align: middle
+        保留 inline 特性，調整圖片與文字基線的對齊方式
+*/
+/* 設定img為流動圖片，避免破版 */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 清除<a>標籤預設的底線與藍色文字舊有樣式 */
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* 清除button的原有樣式 */
+button {
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+}
+
+/* 全域都套用border-box
+    包含了padding和border的區域
+*/
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+
+/* 可以先將所有物件加上邊框，來判斷範圍
+    border會佔據距離，outline不會
+*,*:before,*:after{
+	outline: 1px solid red;
+}
+*/
+
+/* 網格系統 */
+:root {
+    --column: 12; /* 拆分成12格網格系統 */
+    --gutter: 24px; /* gutter配置24px */
+}
+
+/* 格線系統設定*/
+/* 網格欄寬計算公式：（容器寬度 - 所有gutter）/總欄數 ＊佔用欄數 + 欄內gutter */
+/* gutter總寬 = 24px * 11 (12欄之間共 11個間距） */
+
+.col-2 {
+    --span: 2;
+    --gap-count: calc(var(--span) - 1);
+    width: calc(
+        (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count)
+    );
+}
+
+.col-4 {
+    --span: 4;
+    --gap-count: calc(var(--span) - 1);
+    width: calc(
+        (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count)
+    );
+}
+
+.col-5 {
+    --span: 5;
+    --gap-count: calc(var(--span) - 1);
+    width: calc(
+        (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count)
+    );
+}
+
+.col-6 {
+    --span: 6;
+    --gap-count: calc(var(--span) - 1);
+    width: calc(
+        (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count)
+    );
+}
+
+.col-7 {
+    --span: 7;
+    --gap-count: calc(var(--span) - 1);
+    width: calc(
+        (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count)
+    );
+}
+
+.col-10 {
+    --span: 10;
+    --gap-count: calc(var(--span) - 1);
+    width: calc(
+        (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count)
+    );
+}
+
+
+
+/* 變數：顏色 */
+:root {
+    /* primary */
+    --color-primary-50: #FDF7F1;
+    --color-primary-100: #FDE6CF;
+    --color-primary-500: #f5b87b;
+    --color-primary-900: #241408;
+
+    /* neutral */
+    --color-neutral-0: #fff;
+    --color-neutral-500: #737373;
+    --color-neutral-700: #404040;
+    --color-neutral-900: #1E1E1E;
+    
+    /* dark */
+    --color-dark-40a: rgba(0, 0, 0, 0.4);
+    --color-dark-60a: rgba(0, 0, 0, 0.6);
+}
+
+
+/* 顏色 */
+.white {
+    color:var(--color-neutral-0);
+}
+
+.bg-primary-50 {
+    background-color: var(--color-primary-50);
+}
+
+/* Noto-sans字體 */
+.noto-sans-tc {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* 字體樣式 
+    letter-spacing 不支援百分比單位，可以改成用 em 或 px
+*/
+body {
+    font-family: "Noto Sans", sans-serif;
+    color: var(--color-neutral-700);
+    letter-spacing: 0.02em;
+}
+
+.display1 {
+    font-weight: 700;
+    font-size: 300px;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+.display2 {
+    font-weight: 700;
+    font-size: 160px;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+
+.heading-xxxlarge {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 1.2;
+}
+
+.heading-xxlarge {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+}
+
+.heading-xlarge {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.heading-large {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+.heading-medium {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.heading-small {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.heading-xsmall {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.heading-xxsmall {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.heading-xxxsmall {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.paragraph-medium {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.paragraph-small {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.paragraph-xsmall {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.label-medium {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.label-small {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+}
+.label-xsmall {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+
+
+/* 按鈕樣式 */
+.button1 {
+    background-color: var(--color-neutral-700);
+    color: var(--color-primary-50);
+    padding: 12px 24px;
+    border: 1px solid var(--color-primary-50);
+    border-radius: 999px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button2 {
+    background-color: var(--color-primary-50);
+    color: var(--color-neutral-700);
+    padding: 12px 24px;
+    border: 1px solid var(--color-neutral-700);
+    border-radius: 999px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/* 置中 */
+.m-auto {
+    margin: 0 auto;
+}
+
+
+/* utility class 通用設定*/
+header, .profile, .service, .project, .blog, .subscription, .contact {
+    width: 100%;
+}
+
+
+/* 避免畫面縮小時貼其邊界，左右保留12px留白，並將最大寬度設為1296+24= 1320*/
+.container {
+    margin: 0 auto;
+    max-width: 1320px;
+    padding: 0px 12px;
+    width: 100%;
+}
+
+
+
+/* 把右邊多餘的空間往左排 */
+.ml-auto{
+    margin-left: auto;
+}
+
+.margin-tb40 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.gap-4 {
+    gap: 4px;
+}
+
+.gap-8 {
+    gap: 8px;
+}
+
+.gap-12 {
+    gap: 12px;
+}
+
+.gap-16 {
+    gap: 16px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-24 {
+    gap: 24px;
+}
+
+.gap-40 {
+    gap: 40px;
+}
+
+.gap-60 {
+    gap: 60px;
+}
+
+.gap-80 {
+    gap: 80px;
+}
+
+/* 上下padding：「py」
+    左右padding：「px」
+*/
+.py-4 {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.py-12 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.padding-12-all {
+    padding: 12px;
+}
+
+.padding-24-all {
+    padding: 24px;
+}
+
+.py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.py-24 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.py-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.px-12 {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.px-32 {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.px-40 {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* 響應式 */
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display:flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* 位置設定
+需要有設定position（除了預設的static之外的）, z-index才會生效；z-index預設是0，數字越大越會出現在上面
+*/
+.z-1 {
+    z-index: 1;
+}
+
+.relative {
+    position: relative;
+}
+
+.sticky-top {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* 響應式 
+用「d-md-」開頭，能快速了解這是for 手機版的rwd
+*/
+@media (max-width: 375px) {
+    /* 在md以下，原本隱藏的要打開 */
+    .d-md-block{
+        display: block;
+    }
+    /* 在md以下，原本打開的要隱藏 */
+    .d-md-none {
+        display: none;
+    }
+
+    .d-md-flex {
+        display: flex;
+    }
+
+    .d-md-column {
+        flex-direction: column;
+    }
+
+    .d-md-wrap {
+        flex-wrap: wrap;
+    }
+
+    .d-md-alfe {
+        align-items: flex-end;
+    }
+
+    .w-md-full {
+        width: 100%;
+        height: auto;
+    }
+
+    .col-md-12 {
+    --span: 12;
+    --gap-count: calc(var(--span) - 1);
+    width: calc(
+        (100% - var(--gutter) * (var(--column) - 1)) / var(--column) * var(--span) + var(--gutter) * var(--gap-count)
+    );
+    }
+
+    .nav-list.active {
+        padding: 12px 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        background-color: var(--color-primary-50);
+        width: 100%;
+        text-align: center;
+        gap: 12px;
+    }
+
+    /* 導覽列打開時，畫面無法滾動 */
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    /* 遮罩 */
+    body.menu-open .mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-dark-60a);
+    }
+
+    /* 文字設定 */
+    .label-md-small {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    .heading-md-xlarge {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    .heading-md-medium {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.5;
+    }
+
+    .heading-md-xsmall {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .heading-md-xxsmall {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .heading-md-xxxsmall {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .heading-md-small {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    .heading-md-xxxxsmall {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .paragraph-md-small {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .paragraph-md-xsmall {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .display2-md {
+        font-weight: 700;
+        font-size: 160px;
+        line-height: 1.2;
+        letter-spacing: 0;
+    }
+    
+    .flex-md-col {
+        flex-direction: column;
+    }
+
+    /* 間距設定*/
+    .py-md-8 {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .py-md-40 {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .px-md-0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .margin-md-b24{
+        margin-bottom: 24px;
+    }
+
+    .margin-md-tb24{
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .gap-md-0 {
+        gap: 0;
+    }
+
+    .gap-md-4 {
+        gap: 4px;
+    }
+
+    .gap-md-8 {
+        gap: 8px;
+    }
+
+    .gap-md-12 {
+        gap: 12px;
+    }
+
+    .gap-md-20 {
+        gap: 20px;
+    }
+
+    .gap-md-24 {
+        gap: 24px;
+    }
+
+    .gap-md-32 {
+        gap: 32px;
+    }
+
+    .text-md-c {
+        text-align: center;
+    }
+
+
+    /* icon設定 */
+    .icon-md-circle-44 {
+    font-size: 20px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1;
+    }
+
+    .font-md-20 {
+        font-size: 20px;
+    }
+
+    /* 調整顯示順序 */
+    .order-md-1 {
+        order: 1;
+    }
+
+    .order-md-2 {
+        order: 2;
+    }
+
+
+
+    /* 專案作品的列表設定 */
+    .project-list-item1,
+    .project-list-item2,
+    .project-list-item3 {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .project-list-item-detail {
+        max-width: 100%;
+        margin: 280px 16px 16px 16px;
+    }
+
+    .blog-list {
+        overflow-x: auto;
+        padding-bottom: 12px;
+    }
+}
+
+
+/* flex 排版 */
+.fdc {
+    flex-direction: column;
+}
+
+.jcsb {
+    justify-content: space-between;
+}
+
+.jcfe {
+    justify-content: flex-end;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.align-c {
+    align-items: center;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inlineFlex {
+    display: inline-flex;
+}
+
+.text-c {
+    text-align: center;
+}
+
+
+/* 裝飾圖片 */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+
+/* 調整icon大小 
+因為<a>是inline元素，所以需要調整，並且讓<i>可以垂直水平置中
+*/
+
+.icon-circle-48 {
+    font-size: 24px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.font-28 {
+    font-size: 28px;
+}
+
+.font-48 {
+    font-size: 48px;
+}
+
+
+/* 寬度分配 */
+.w50 {
+    width: 50%;
+}
+
+.w-full {
+    width: 100%;
+}
+
+/* 導覽列 */
+nav {
+    background-color: var(--color-primary-50);
+}
+
+.nav-list a:hover {
+    background-color: var(--color-primary-900);
+    color: var(--color-neutral-0);
+}
+
+/* Service 區塊*/
+/* 手機版rwd */
+@media (max-width: 375px) {
+    /* 設定服務項目的卡片可以橫向滑動 */
+    .service-skill {
+        overflow-x: auto;
+        padding-bottom: 12px;
+        scrollbar-width: none; /* 隱藏原生的滾動條*/
+    }
+
+    .service-skill-card {
+        flex-shrink: 0;
+        width: 260px;
+    }
+}
+
+
+
+
+/* Subscription 區塊 */
+.subscription {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/subscription_bg.png?raw=true");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.subscription-area-form form {
+    border: 1px solid var(--color-neutral-0);
+    border-radius: 999px;
+    padding: 12px 8px 12px 24px;
+}
+
+.subscription-area-form input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.subscription-area-form input::placeholder {
+    color: var(--color-neutral-0);
+}
+
+.subscription-area-form button {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 24px;
+    background: var(--color-neutral-0);
+    cursor: pointer;
+}
+
+@media (max-width:375px) {
+    .subscription {
+        background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/subscription_bg.png?raw=true");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+
+    .subscription img {
+        width: 100%;
+        height: auto;
+    }
+
+    .subscription {
+        background-position: center center;
+    }
+}
+
+
+
+/* Contact 區塊 */
+.contact-input-half {
+    --gap: 24px;
+    width: calc(100% - var(--gap) / 2);
+}
+
+
+.contact {
+    background-color: var(--color-primary-900);
+    color: var(--color-neutral-0);
+}
+
+.padding-top-68 {
+    padding-top: 68px;
+}
+
+@media (max-width: 375px) {
+    .padding-md-top0 {
+        padding-top: 0;
+    }
+
+    .contact-input-half {
+        width: 100%;
+    }
+}
+
+.contact-mainTitle-connect-SNS a {
+    border: 1px solid var(--color-neutral-0);
+    border-radius: 999px;
+    padding: 12px;
+}
+
+.contact-form input {
+    border: 1px solid var(--color-neutral-0);
+    border-radius: 999px;
+    background: transparent;
+}
+
+.contact-form input::placeholder {
+    color: var(--color-neutral-0);
+}
+
+.contact-form textarea {
+    min-height: 136px;
+    border: 1px solid var(--color-neutral-0);
+    border-radius: 40px;
+    background: transparent;
+    resize: none; /* 不讓使用者手動調整輸入框大小*/
+}
+
+.contact-form textarea::placeholder {
+    color: var(--color-neutral-0);
+}
+
+.contact-form button {
+    border: none;
+    border-radius: 999px;
+    background: var(--color-neutral-0);
+    color: var(--color-neutral-700);
+    cursor: pointer;
+}
+
+/* Project 區塊 */
+.project-list-item1 {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_1.png?raw=true");
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.project-list-item2 {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_2.png?raw=true");
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.project-list-item3 {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_3.png?raw=true");
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.project-list-item4 {
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_4.png?raw=true");
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.project-list-item-detail {
+    max-width: 386px;
+    padding: 40px;
+    margin: 28px 0px 28px 28px;
+}
+
+
+@media (max-width: 375px) {
+    .project-list-item1 {
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/project_1.png?raw=true");
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        height: 580px;
+    }
+
+    .project-list-item2 {
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/project_2.png?raw=true");
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    .project-list-item3 {
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/project_3.png?raw=true");
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    .project-list-item4 {
+        background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/mobile/project_4.png?raw=true");
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+
+    .project-list-item-detail {
+        max-width: 319px;
+        padding: 24px;
+        margin: 280px 16px 16px 16px;
+    }
+}
