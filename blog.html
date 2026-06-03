@@ -6,9 +6,9 @@
     <title>Blog | Nelson</title>
 
     <!--載入相關CSS檔案，從reset先放，清空預設樣式-->
-    <link rel="stylesheet" href="/CSS/reset.css">
-    <link rel="stylesheet" href="/CSS/base.css">
-    <link rel="stylesheet" href="CSS/blog.css">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/blog.css">
 
     <!--搜尋引擎相關-->
     <meta name="keywords" content="UIUX設計師, 前端工程師, 六角學院">
@@ -82,7 +82,7 @@
     </div>
     <!--文章區域-->
     <div class="article">
-        <div class="container py-80 py-md-40 d-flex fdc gap-80">
+        <div class="container py-80 py-md-40 d-flex flex-wrap fdc gap-80">
             <div class="article-block d-flex gap-24 d-md-column">
                 <div class="article-block-nav col-2 col-md-12">
                     <ul class="heading-xxsmall heading-md-xxxsmall d-md-flex">
@@ -256,13 +256,13 @@
 
     <!--Subscription區域-->
     <div class="subscription">
-        <div class="container d-flex gap-24 d-md-column">
-            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/subscription.png?raw=true" alt="subscription_photo">
-            <div class="subscription-area d-flex fdc gap-24 jcc">
+        <div class="container d-flex gap-24 d-md-column flex-wrap">
+            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/subscription.png?raw=true" alt="subscription_photo" class="w-full">
+            <div class="subscription-area d-flex fdc gap-24 jcc w-full">
                 <div class="subscription-area-mainTitle d-flex fdc gap-24 white">
                     <div class="subscription-area-mainTitle-title">
                         <h6 class="heading-xxxsmall heading-md-xxxxsmall">電子報訂閱</h6>
-                        <h2 class="heading-xxxlarge heading-md-xlarge">SUBSCRIPTION</h2>
+                        <h2 class="heading-xxxlarge heading-md-xlarge auto-wrap">SUBSCRIPTION</h2>
                     </div>
                     <p class="paragraph-medium paragraph-md-small">你也在追求設計美感與技術落地的完美平衡嗎？作為資深設計師兼工程師，我深知跨領域協作的痛點。訂閱電子報，我將分享如何利用 AI 工具提升產能！</p>
                 </div>
@@ -281,8 +281,8 @@
 
     <!--Contact區域-->
     <div class="contact">
-        <div class="container d-flex gap-24 py-80 py-md-40 flex-md-col" id="contact">
-            <div class="contact-mainTitle d-flex fdc gap-24 col-5 col-md-12">
+        <div class="container d-flex gap-24 py-80 py-md-40 flex-md-col d-tb-column" id="contact">
+            <div class="contact-mainTitle d-flex flex-wrap fdc gap-24 col-5 col-md-12">
                 <div class="contact-mainTitle-tile">
                     <h6 class="heading-xxxsmall heading-md-xxxxsmall">與我聯絡</h6>
                     <h2 class="heading-xxxlarge heading-md-xlarge">CONTACT</h2>
@@ -292,7 +292,7 @@
                     <p>歡迎填寫表單 或 直接與我聯絡！</p>
                 </div>
                 <!--桌機版：先出現SNS資訊-->
-                <div class="contact-mainTitle-connect d-flex fdc gap-24 d-md-none paragraph-medium paragraph-md-small padding-top-68 padding-md-top0">
+                <div class="contact-mainTitle-connect d-flex fdc gap-24 d-tb-none d-md-none paragraph-medium paragraph-md-small padding-top-68 padding-md-top0">
                     <div class="contact-mainTitle-connect-SNS d-flex gap-12">
                         <a href="#" class="icon-circle-48"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="icon-circle-48"><i class="bi bi-line"></i></a>
@@ -308,7 +308,7 @@
                 <!--action:"javascript:void(0)"：完全不送出
                 method：「post」不會顯示在網址上/「get」會顯示在網址上
                 -->
-                <form action="javascript:void(0)" method="post" class="d-flex fdc gap-24 paragraph-medium paragraph-md-small flex-wrap px-40 px-md-0">
+                <form action="javascript:void(0)" method="post" class="d-flex fdc gap-24 paragraph-medium paragraph-md-small flex-wrap px-40 px-md-0 ">
                     <div class="contact-form-namePhone d-flex gap-24 d-md-column">
                         <input type="text" placeholder="姓名" class="contact-input-half py-20 px-32 w-md-full">
                         <input type="tel" placeholder="手機號碼" class="contact-input-half py-20 px-32 w-md-full">
@@ -319,7 +319,7 @@
                 </form>
             </div>
             <!--RWD：375px SNS資訊在表格後出現-->
-            <div class="contact-sns-md d-none d-md-block paragraph-medium paragraph-md-small">
+            <div class="contact-sns-md d-none d-md-block d-tb-block paragraph-medium paragraph-md-small">
                 <div class="contact-mainTitle-connect d-flex fdc gap-24 padding-top-68 padding-md-top0">
                     <div class="contact-mainTitle-connect-SNS d-flex gap-12">
                         <a href="#" class="icon-md-circle-44"><i class="bi bi-instagram"></i></a>

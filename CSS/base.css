@@ -35,10 +35,11 @@ button {
 
 /* 可以先將所有物件加上邊框，來判斷範圍
     border會佔據距離，outline不會
+*/
 *,*:before,*:after{
 	outline: 1px solid red;
 }
-*/
+
 
 /* 網格系統 */
 :root {
@@ -428,9 +429,12 @@ header, .profile, .service, .project, .blog, .subscription, .contact {
 }
 
 
+
+
 /* 響應式 
 用「d-md-」開頭，能快速了解這是for 手機版的rwd
 */
+
 @media (max-width: 375px) {
     /* 在md以下，原本隱藏的要打開 */
     .d-md-block{
@@ -673,7 +677,6 @@ header, .profile, .service, .project, .blog, .subscription, .contact {
     }
 }
 
-
 /* flex 排版 */
 .fdc {
     flex-direction: column;
@@ -705,6 +708,11 @@ header, .profile, .service, .project, .blog, .subscription, .contact {
 
 .text-c {
     text-align: center;
+}
+
+.auto-wrap {
+    word-break: break-all; /* 遇到長英文或網址時，強制拆開單字換行 */
+    overflow-wrap: break-word; /* 遇到太長的字串時，自動斷行到下一行 */
 }
 
 
@@ -758,6 +766,7 @@ nav {
 
 /* Service 區塊*/
 /* 手機版rwd */
+
 @media (max-width: 375px) {
     /* 設定服務項目的卡片可以橫向滑動 */
     .service-skill {
@@ -772,6 +781,10 @@ nav {
     }
 }
 
+
+.blog-list-article {
+    max-width: 416px;
+}
 
 
 
@@ -795,6 +808,8 @@ nav {
     border: none;
     outline: none;
     background: transparent;
+    flex: 1;
+    width: 100%;
 }
 
 .subscription-area-form input::placeholder {
@@ -808,6 +823,7 @@ nav {
     background: var(--color-neutral-0);
     cursor: pointer;
 }
+
 
 @media (max-width:375px) {
     .subscription {
@@ -830,11 +846,10 @@ nav {
 }
 
 
-
 /* Contact 區塊 */
 .contact-input-half {
     --gap: 24px;
-    width: calc(100% - var(--gap) / 2);
+    width: calc((100% - var(--gap)) / 2);
 }
 
 
@@ -846,6 +861,7 @@ nav {
 .padding-top-68 {
     padding-top: 68px;
 }
+
 
 @media (max-width: 375px) {
     .padding-md-top0 {
@@ -893,6 +909,41 @@ nav {
     cursor: pointer;
 }
 
+@media (max-width: 928px) {
+    .d-tb-column {
+        flex-direction: column;
+    }
+
+    .d-tb-block {
+        display: block;
+    }
+
+    .d-tb-none {
+        display: none;
+    }
+
+    /* 調整顯示順序 */
+    .order-tb-1 {
+        order: 1;
+    }
+
+    .order-tb-2 {
+        order: 2;
+    }
+}
+
+
+
+@media (max-width: 375px) {
+    .contact-form.col-md-12 {
+        width: 100%;
+    }    
+}
+
+
+
+
+
 /* Project 區塊 */
 .project-list-item1 {
     background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/project_1.png?raw=true");
@@ -923,6 +974,7 @@ nav {
     padding: 40px;
     margin: 28px 0px 28px 28px;
 }
+
 
 
 @media (max-width: 375px) {

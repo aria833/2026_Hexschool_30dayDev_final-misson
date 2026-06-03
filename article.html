@@ -6,9 +6,9 @@
     <title>Article | Nelson</title>
 
     <!--載入相關CSS檔案，從reset先放，清空預設樣式-->
-    <link rel="stylesheet" href="/CSS/reset.css">
-    <link rel="stylesheet" href="/CSS/base.css">
-    <link rel="stylesheet" href="CSS/article.css">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/article.css">
 
     <!--搜尋引擎相關-->
     <meta name="keywords" content="UIUX設計師, 前端工程師, 六角學院">
@@ -196,7 +196,7 @@
                     <h6 class="heading-xxxsmall heading-md-xxxxsmall">相關文章</h6>
                     <h2 class="heading-xxxlarge heading-md-xlarge">RELATED BLOGS</h2>
             </div>
-            <div class="blog-list d-flex gap-24 gap-md-12">
+            <div class="blog-list d-flex flex-wrap gap-24 gap-md-12 d-md-wrap">
                 <div class="blog-list-article">
                     <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2026-web-camp/blog_2.png?raw=true" alt="blog_photo1">
                     <div class="blog-list-article-detail d-flex fdc gap-12 gap-md-8">
@@ -283,8 +283,8 @@
     </div>
     <!--Contact區域-->
     <div class="contact">
-        <div class="container d-flex gap-24 py-80 py-md-40 flex-md-col" id="contact">
-            <div class="contact-mainTitle d-flex fdc gap-24 col-5 col-md-12">
+        <div class="container d-flex gap-24 py-80 py-md-40 flex-md-col d-tb-column" id="contact">
+            <div class="contact-mainTitle d-flex flex-wrap fdc gap-24 col-5 col-md-12">
                 <div class="contact-mainTitle-tile">
                     <h6 class="heading-xxxsmall heading-md-xxxxsmall">與我聯絡</h6>
                     <h2 class="heading-xxxlarge heading-md-xlarge">CONTACT</h2>
@@ -294,7 +294,7 @@
                     <p>歡迎填寫表單 或 直接與我聯絡！</p>
                 </div>
                 <!--桌機版：先出現SNS資訊-->
-                <div class="contact-mainTitle-connect d-flex fdc gap-24 d-md-none paragraph-medium paragraph-md-small padding-top-68 padding-md-top0">
+                <div class="contact-mainTitle-connect d-flex fdc gap-24 d-tb-none d-md-none paragraph-medium paragraph-md-small padding-top-68 padding-md-top0">
                     <div class="contact-mainTitle-connect-SNS d-flex gap-12">
                         <a href="#" class="icon-circle-48"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="icon-circle-48"><i class="bi bi-line"></i></a>
@@ -310,7 +310,7 @@
                 <!--action:"javascript:void(0)"：完全不送出
                 method：「post」不會顯示在網址上/「get」會顯示在網址上
                 -->
-                <form action="javascript:void(0)" method="post" class="d-flex fdc gap-24 paragraph-medium paragraph-md-small flex-wrap px-40 px-md-0">
+                <form action="javascript:void(0)" method="post" class="d-flex fdc gap-24 paragraph-medium paragraph-md-small flex-wrap px-40 px-md-0 ">
                     <div class="contact-form-namePhone d-flex gap-24 d-md-column">
                         <input type="text" placeholder="姓名" class="contact-input-half py-20 px-32 w-md-full">
                         <input type="tel" placeholder="手機號碼" class="contact-input-half py-20 px-32 w-md-full">
@@ -321,7 +321,7 @@
                 </form>
             </div>
             <!--RWD：375px SNS資訊在表格後出現-->
-            <div class="contact-sns-md d-none d-md-block paragraph-medium paragraph-md-small">
+            <div class="contact-sns-md d-none d-md-block d-tb-block paragraph-medium paragraph-md-small">
                 <div class="contact-mainTitle-connect d-flex fdc gap-24 padding-top-68 padding-md-top0">
                     <div class="contact-mainTitle-connect-SNS d-flex gap-12">
                         <a href="#" class="icon-md-circle-44"><i class="bi bi-instagram"></i></a>

@@ -131,6 +131,7 @@ body {
     }
 
 /* Related blogs區塊 */
+
 @media (max-width: 375px) {
     .blog-list {
         flex-direction: row;
