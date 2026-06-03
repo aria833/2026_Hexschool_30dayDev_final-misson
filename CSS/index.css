@@ -12,6 +12,9 @@ body {
 .deco {
     position: absolute;
     pointer-events: none; /* 避免裝飾圖擋住滑鼠點擊 */
+
+    /* 新增平滑過渡：當 JS 改變 transform 時才會柔和 */
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .decorate-1 {
