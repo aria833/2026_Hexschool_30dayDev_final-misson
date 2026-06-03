@@ -45,6 +45,17 @@
 
 }
 
+.article-block-list-card-half {
+    --gap: 24px;
+    width: calc((100% - var(--gap)) / 2);
+}
+
+@media (max-width: 375px) {
+    .article-block-list-card-half {
+        width: 100%;
+    }
+}
+
 
 /* nav 區塊*/
 .article-block-nav a {
