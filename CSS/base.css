@@ -36,11 +36,11 @@ button {
 
 /* 可以先將所有物件加上邊框，來判斷範圍
     border會佔據距離，outline不會
-*/
+
 *,*:before,*:after{
 	outline: 1px solid red;
 }
-
+*/
 
 /* 網格系統 */
 :root {
