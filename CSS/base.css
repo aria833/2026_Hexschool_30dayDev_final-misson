@@ -9,7 +9,6 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
-    vertical-align: middle;
 }
 
 /* 清除<a>標籤預設的底線與藍色文字舊有樣式 */
