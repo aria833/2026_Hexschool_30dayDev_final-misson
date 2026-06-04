@@ -3,11 +3,31 @@ body {
     background-color: var(--color-primary-50);
 }
 
-/* 裝飾定位 */
-.profile {
-    position: relative;
-    overflow: hidden;
+.service-skill-card {
+    max-width: 306px;
 }
+
+@media (max-width: 375px) {
+    .service-skill {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;   /* 讓手機滑動時有滑順的滑鼠/手指跟隨感 */
+        scrollbar-width: none; /* 隱藏原生的滾動條*/
+    }
+
+    .service-skill-card {
+        width: 100%;
+    }
+}
+
+
+/* 裝飾定位 */
+.relative {
+     position: relative;
+}
+
 
 .deco {
     position: absolute;
@@ -18,50 +38,52 @@ body {
 }
 
 .decorate-1 {
-    top: 97px;
-    left: 781px;
+    position: absolute;
+    top: 15%;
+    left: 35%;
 }
 
 .decorate-2 {
-    bottom: 87px;
-    right: 232px;
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
 }
 
 .flower-left-top {
-    top: 56px;
-    left: 86px;
+    position: absolute;
+    top: 8%;
+    left: 6%;
 }
 
 .decorate-4 {
-    top: 120px;
-    left: 225px;
+    display: none;
 }
 
 .decorate-3 {
+    position: absolute;
     &.flower-left-bottom {
-        top: 528px;
-        left: 703px;
+        top: 70%;
+        left: 50%;
         width: 80px;
         height: 80px;
     }
 }
 
 .decorate-5 {
-    top: 597px;
-    left: 523px;
+    display: none;
 }
 
 .decorate-3 {
+    position: absolute;
     &.flower-right-center {
-        top: 206px;
-        right: 142px;
-        width: 80px;
-        height: 80px;
+        top: 5%;
+        right: 2%;
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 928px) {
     .decorate-1 {
+        position: absolute;
         top: 26px;
         left: -27px;
         width: 80px;
@@ -69,6 +91,48 @@ body {
     }
 
     .decorate-2 {
+        position: absolute;
+        top: 320px;
+        right: 10px;
+        width: 80px;
+        height: 69px;
+    }
+
+    .decorate-3 {
+        display: none;
+    }
+
+    &.flower-left-top {
+      display: none;
+    }
+
+    &.flower-right-center {
+      display: none;
+    }
+
+    .decorate-4,
+    .decorate-5 {
+        display: none;
+    }
+
+    .decorate-6 {
+        display: none;
+    }
+}
+    
+
+
+@media (max-width: 375px) {
+    .decorate-1 {
+        position: absolute;
+        top: 26px;
+        left: -27px;
+        width: 80px;
+        height: 79px;
+    }
+
+    .decorate-2 {
+        position: absolute;
         top: 274px;
         right: -25px;
         width: 80px;
@@ -76,11 +140,12 @@ body {
     }
 
     .decorate-3 {
-    &.flower-left-bottom {
-      width: 80px;
-      height: 80px;
-      top: 414px;
-      left: 249px;
+        position: absolute;
+        &.flower-left-bottom {
+        width: 80px;
+        height: 80px;
+        top: 414px;
+        left: 249px;
     }
 
     &.flower-left-top {
@@ -97,7 +162,7 @@ body {
         display: none;
     }
 
-    /* 僅於手機版顯示的線條圖片 */
+    /* 僅於平板＆手機版顯示的線條圖片 */
     .decorate-6 {
         position: absolute;
         display: block;
@@ -130,11 +195,19 @@ body {
         justify-content: space-between;
     }
 
-/* Related blogs區塊 */
+/* Blogs區塊 */
+@media (max-width: 928px) {
+    .blog-list-article {
+        flex-shrink: 0;
+        width: 100%;
+    }
+}
+
 
 @media (max-width: 375px) {
     .blog-list {
         flex-direction: row;
+        flex-wrap: nowrap;
         align-items: stretch;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;   /* 讓手機滑動時有滑順的滑鼠/手指跟隨感 */
@@ -143,7 +216,8 @@ body {
 
     .blog-list-article {
         flex-shrink: 0;
-        width: 280px;
+        width: 100%;
     }
 
 }
+

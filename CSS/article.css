@@ -118,14 +118,16 @@ td {
     .blog-list {
         flex-direction: row;
         align-items: stretch;
-        overflow-x: auto;
+        overflow-x: hidden;
+        padding-bottom: 0px;
         -webkit-overflow-scrolling: touch;   /* 讓手機滑動時有滑順的滑鼠/手指跟隨感 */
         scrollbar-width: none; /* 隱藏原生的滾動條*/
     } 
 
+
     .blog-list-article {
         flex-shrink: 0;
-        width: 280px;
+        width: 100%;
     }
 }
 

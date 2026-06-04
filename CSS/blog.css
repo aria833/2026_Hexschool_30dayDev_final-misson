@@ -50,6 +50,12 @@
     width: calc((100% - var(--gap)) / 2);
 }
 
+@media (max-width: 928px) {
+    .article-block-list-card-half {
+        width: 100%;
+    }
+}
+
 @media (max-width: 375px) {
     .article-block-list-card-half {
         width: 100%;

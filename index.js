@@ -17,7 +17,7 @@ menuBtn.addEventListener('click', function () {
 // 首頁的動畫效果：程式碼來源->Gemini
 document.addEventListener('DOMContentLoaded', () => {
     // 鎖定目標塗鴉元素
-    const magneticElements = document.querySelectorAll('.decorate-1, .decorate-2');
+    const magneticElements = document.querySelectorAll('.decorate-1, .decorate-2, .decorate-3, .decorate-4');
     
     // 參數微調：擴大感應半徑，但大幅縮小最大位移
     const triggerRadius = 200;   // 滑鼠在 200px 內就會開始溫柔感應

@@ -9,6 +9,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+    vertical-align: middle;
 }
 
 /* 清除<a>標籤預設的底線與藍色文字舊有樣式 */
@@ -252,9 +253,6 @@ body {
     font-size: 16px;
     line-height: 1.5;
 }
-
-
-
 
 
 /* 按鈕樣式 */
@@ -781,7 +779,6 @@ nav {
     }
 }
 
-
 .blog-list-article {
     max-width: 416px;
 }
@@ -922,6 +919,14 @@ nav {
         display: none;
     }
 
+    .d-tb-flex {
+        display: flex;
+    }
+
+    .d-tb-spacearound{
+        justify-content: space-around;
+    }
+
     /* 調整顯示順序 */
     .order-tb-1 {
         order: 1;
@@ -930,6 +935,26 @@ nav {
     .order-tb-2 {
         order: 2;
     }
+
+    .col-tb-12 {
+        width: 100%;
+    }
+
+
+    .w-tb-full {
+        width: 100%;
+    }
+
+    .px-tb-0 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .contact-input-half {
+        width: 100%;
+    }
+
+
 }
 
 
